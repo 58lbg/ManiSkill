@@ -1,0 +1,60 @@
+英文环境名称	中文翻译
+SceneManipulation-v1	场景操作 - v1
+ArchitecTHOR_SceneManipulation-v1	ArchitecTHOR 场景操作 - v1
+ReplicaCAD_SceneManipulation-v1	ReplicaCAD 场景操作 - v1
+ReplicaCADTidyHouseTrain_SceneManipulation-v1	ReplicaCAD 整理房屋（训练集）- 场景操作 - v1
+ReplicaCADTidyHouseVal_SceneManipulation-v1	ReplicaCAD 整理房屋（验证集）- 场景操作 - v1
+ReplicaCADPrepareGroceriesTrain_SceneManipulation-v1	ReplicaCAD 准备杂货（训练集）- 场景操作 - v1
+ReplicaCADPrepareGroceriesVal_SceneManipulation-v1	ReplicaCAD 准备杂货（验证集）- 场景操作 - v1
+ReplicaCADSetTableTrain_SceneManipulation-v1	ReplicaCAD 摆放餐桌（训练集）- 场景操作 - v1
+ReplicaCADSetTableVal_SceneManipulation-v1	ReplicaCAD 摆放餐桌（验证集）- 场景操作 - v1
+MS-CartpoleBalance-v1	MS - 倒立摆平衡 - v1
+MS-CartpoleSwingUp-v1	MS - 倒立摆起摆 - v1
+MS-HopperStand-v1	MS - 跳跃机器人站立 - v1
+MS-HopperHop-v1	MS - 跳跃机器人跳跃 - v1
+MS-HumanoidStand-v1	MS - 人形机器人站立 - v1
+MS-HumanoidWalk-v1	MS - 人形机器人行走 - v1
+MS-HumanoidRun-v1	MS - 人形机器人奔跑 - v1
+MS-AntWalk-v1	MS - 蚂蚁机器人行走 - v1
+MS-AntRun-v1	MS - 蚂蚁机器人奔跑 - v1
+RotateValveLevel0-v1 ~ RotateValveLevel4-v1	旋转阀门（0-4 级）-v1（级别越高操作难度越大）
+RotateSingleObjectInHandLevel0-v1 ~ RotateSingleObjectInHandLevel3-v1	手持单个物体旋转（0-3 级）-v1（级别越高精度要求越高）
+PutCarrotOnPlateInScene-v1	场景中放置胡萝卜到盘子 - v1
+PutEggplantInBasketScene-v1	场景中放置茄子到篮子 - v1
+StackGreenCubeOnYellowCubeBakedTexInScene-v1	场景中绿色立方体堆叠到黄色纹理立方体 - v1
+PutSpoonOnTableClothInScene-v1	场景中放置勺子到桌布 - v1
+TableTopFreeDraw-v1	桌面自由绘画 - v1
+DrawTriangle-v1	绘制三角形 - v1
+DrawSVG-v1	绘制 SVG 图形 - v1
+Empty-v1	空环境 - v1（基础测试场景）
+FMBAssembly1Easy-v1	FMB 组装 1（简单难度）-v1
+UnitreeG1PlaceAppleInBowl-v1	宇树 G1 机器人放置苹果到碗 - v1
+UnitreeH1Stand-v1	宇树 H1 机器人站立 - v1
+UnitreeG1Stand-v1	宇树 G1 机器人站立 - v1
+UnitreeG1TransportBox-v1	宇树 G1 机器人运输箱子 - v1
+OpenCabinetDrawer-v1	打开橱柜抽屉 - v1
+OpenCabinetDoor-v1	打开橱柜门 - v1
+RoboCasaKitchen-v1	RoboCasa 厨房场景 - v1（机器人家庭厨房环境）
+AnymalC-Reach-v1	AnymalC 机器人伸手抓取 - v1
+UnitreeGo2-Reach-v1	宇树 Go2 机器人伸手抓取 - v1
+AnymalC-Spin-v1	AnymalC 机器人旋转操作 - v1
+TriFingerRotateCubeLevel0-v1 ~ TriFingerRotateCubeLevel4-v1	三指机器人旋转立方体（0-4 级）-v1（级别越高控制复杂度越高）
+AssemblingKits-v1	套件组装 - v1
+LiftPegUpright-v1	竖直提起销钉 - v1
+PegInsertionSide-v1	侧面插入销钉 - v1
+PickClutterYCB-v1	抓取杂乱 YCB 物体 - v1（YCB 为标准物体数据集）
+PickCube-v1	抓取立方体 - v1
+PickCubeSO100-v1	抓取立方体（SO100 数据集）-v1
+PickSingleYCB-v1	抓取单个 YCB 物体 - v1
+PlugCharger-v1	插入充电器 - v1
+PullCube-v1	拉动立方体 - v1
+PushCube-v1	推动立方体 - v1
+StackCube-v1	堆叠立方体 - v1
+TurnFaucet-v1	转动水龙头 - v1
+TwoRobotPickCube-v1	双机器人抓取立方体 - v1
+TwoRobotStackCube-v1	双机器人堆叠立方体 - v1
+PokeCube-v1	戳动立方体 - v1
+PlaceSphere-v1	放置球体 - v1
+RollBall-v1	滚动球体 - v1
+PushT-v1	推动 T 形物体 - v1
+PullCubeTool-v1	使用工具拉动立方体 - v1
