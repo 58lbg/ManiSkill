@@ -1208,6 +1208,7 @@ class BaseEnv(gym.Env):
             physx_system = physx.PhysxCpuSystem()
             systems = [physx_system]
             if render_utils.can_render(self._render_device):
+                print(self._render_device)
                 systems.append(sapien.render.RenderSystem(self._render_device))
             sub_scenes = [
                 sapien.Scene(systems)
