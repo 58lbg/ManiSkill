@@ -21,7 +21,7 @@ def parse_args(args=None):
     parser.add_argument("--only-count-success", action="store_true", help="If true, generates trajectories until num_traj of them are successful and only saves the successful trajectories/videos")
     parser.add_argument("--reward-mode", type=str)
     parser.add_argument("-b", "--sim-backend", type=str, default="auto", help="Which simulation backend to use. Can be 'auto', 'cpu', 'gpu'")
-    parser.add_argument("--render-mode", type=str, default="rgb_array", help="can be 'sensors' or 'rgb_array' which only affect what is saved to videos")
+    parser.add_argument("--render-mode", type=str, default="human", help="can be 'sensors' or 'rgb_array' which only affect what is saved to videos")
     parser.add_argument("--vis", action="store_true", help="whether or not to open a GUI to visualize the solution live")
     parser.add_argument("--save-video", action="store_true", help="whether or not to save videos locally")
     parser.add_argument("--traj-name", type=str, help="The name of the trajectory .h5 file that will be created.")
