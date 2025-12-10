@@ -67,7 +67,7 @@ class TableSceneBuilder(SceneBuilder):
 
         # --- load custom toy model ---
         model_dir = Path(osp.dirname(__file__)) / "assets"
-        toy_path = str(model_dir / "banbang.glb")
+        toy_path = str(model_dir / "bangbang.glb")
         builder = self.scene.create_actor_builder()
 
         # 添加视觉 (visual) mesh，从 glb 文件读取
