@@ -82,7 +82,7 @@ class TableSceneBuilder(SceneBuilder):
         # 例如放在桌面中心 (x, y) = (0, 0)，z 为 table height + 一定 offset
         # 假设 table top 的 z = 0 （你 build 的 table collision bottom 为 0），
         # 那么你给 toy 一个适当高度 (例如 0.5 m)：
-        builder.initial_pose = sapien.Pose(p=[0.0, 0.0, 0.5], q=q_90deg_z)
+        builder.initial_pose = sapien.Pose(p=[0.0, 0.0, -0.496], q=q_90deg_z)
 
         toy = builder.build(name="toy_banbang")
 
