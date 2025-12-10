@@ -17,7 +17,7 @@ def parse_args(args=None):
     parser = argparse.ArgumentParser()
     parser.add_argument("-e", "--env-id", type=str, default="PickCubeSO100-v1", help=f"Environment to run motion planning solver on. Available options are {list(MP_SOLUTIONS.keys())}")
     parser.add_argument("-o", "--obs-mode", type=str, default="none", help="Observation mode to use. Usually this is kept as 'none' as observations are not necesary to be stored, they can be replayed later via the mani_skill.trajectory.replay_trajectory script.")
-    parser.add_argument("-n", "--num-traj", type=int, default=10, help="Number of trajectories to generate.")
+    parser.add_argument("-n", "--num-traj", type=int, default=30, help="Number of trajectories to generate.")
     parser.add_argument("--only-count-success", action="store_true", help="If true, generates trajectories until num_traj of them are successful and only saves the successful trajectories/videos")
     parser.add_argument("--reward-mode", type=str)
     parser.add_argument("-b", "--sim-backend", type=str, default="auto", help="Which simulation backend to use. Can be 'auto', 'cpu', 'gpu'")
@@ -73,7 +73,7 @@ def _main(args, proc_id: int = 0, start_seed: int = 9) -> str:
     passed = 0
     while True:
         try:
-            res = solve(env, seed=seed, debug=False, vis=True if args.vis else False)
+            res = solve(env, seed=seed, debug=False, vis=True if args.vis else True)
         except Exception as e:
             print(f"Cannot find valid solution because of an error in motion planning solution: {e}")
             res = -1
