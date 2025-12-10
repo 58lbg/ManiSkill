@@ -205,7 +205,7 @@ class BaseEnv(gym.Env):
         sim_config: Union[SimConfig, dict] = dict(),
         reconfiguration_freq: Optional[int] = None,
         sim_backend: str = "auto",
-        render_backend: str = "gpu",
+        render_backend: str = "cpu",
         parallel_in_single_scene: bool = False,
         enhanced_determinism: bool = False,
     ):
