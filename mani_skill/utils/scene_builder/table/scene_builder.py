@@ -90,10 +90,10 @@ class TableSceneBuilder(SceneBuilder):
         builder = self.scene.create_actor_builder()
 
         # 添加视觉 (visual) mesh，从 glb 文件读取
-        builder.add_visual_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
+        builder.add_visual_from_file(filename=toy_path, scale=[1.8]*3)
         # 添加碰撞 (collision) — 推荐用凸碰撞 (convex collision) 或简单型碰撞
         # 这里用 convex collision 分解 (non-convex collisions 常不推荐用于动态／复杂 shape)
-        builder.add_convex_collision_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
+        builder.add_convex_collision_from_file(filename=toy_path, scale=[1.8]*3)
 
         # 设置初始 pose — 你需要根据你的 table size /位置调整 p、q
         # 例如放在桌面中心 (x, y) = (0, 0)，z 为 table height + 一定 offset
