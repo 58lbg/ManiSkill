@@ -4,4 +4,4 @@ sudo apt install -y vulkan-tools mesa-vulkan-drivers
 python -m mani_skill.examples.teleoperation.interactive_so100
 python -m mani_skill.examples.motionplanning.so100.run
 
-export https_proxy=http://10.253.69.100:7890 http_proxy=http://10.253.69.100:7890 all_proxy=socks5://10.253.69.100:7890
+export https_proxy=http://10.253.24.15:7890 http_proxy=http://10.253.24.15:7890 all_proxy=socks5://10.253.24.15:7890
