@@ -65,24 +65,24 @@ class TableSceneBuilder(SceneBuilder):
         self.scene_objects: list[sapien.Entity] = [self.table, self.ground]
 
 
-        # # --- load custom toy model ---
-        # model_dir = Path(osp.dirname(__file__)) / "assets"
-        # toy_path = str(model_dir / "bangbang.glb")
-        # builder = self.scene.create_actor_builder()
-        #
-        # # 添加视觉 (visual) mesh，从 glb 文件读取
-        # builder.add_visual_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
-        # # 添加碰撞 (collision) — 推荐用凸碰撞 (convex collision) 或简单型碰撞
-        # # 这里用 convex collision 分解 (non-convex collisions 常不推荐用于动态／复杂 shape)
-        # builder.add_convex_collision_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
-        #
-        # # 设置初始 pose — 你需要根据你的 table size /位置调整 p、q
-        # # 例如放在桌面中心 (x, y) = (0, 0)，z 为 table height + 一定 offset
-        # # 假设 table top 的 z = 0 （你 build 的 table collision bottom 为 0），
-        # # 那么你给 toy 一个适当高度 (例如 0.5 m)：
-        # builder.initial_pose = sapien.Pose(p=[0.0, 0.0, 0.5], q=[1, 0, 0, 0])
-        #
-        # toy = builder.build(name="toy_banbang")
+        # --- load custom toy model ---
+        model_dir = Path(osp.dirname(__file__)) / "assets"
+        toy_path = str(model_dir / "bangbang.glb")
+        builder = self.scene.create_actor_builder()
+
+        # 添加视觉 (visual) mesh，从 glb 文件读取
+        builder.add_visual_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
+        # 添加碰撞 (collision) — 推荐用凸碰撞 (convex collision) 或简单型碰撞
+        # 这里用 convex collision 分解 (non-convex collisions 常不推荐用于动态／复杂 shape)
+        builder.add_convex_collision_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
+
+        # 设置初始 pose — 你需要根据你的 table size /位置调整 p、q
+        # 例如放在桌面中心 (x, y) = (0, 0)，z 为 table height + 一定 offset
+        # 假设 table top 的 z = 0 （你 build 的 table collision bottom 为 0），
+        # 那么你给 toy 一个适当高度 (例如 0.5 m)：
+        builder.initial_pose = sapien.Pose(p=[0.0, 0.0, 0.5], q=[1, 0, 0, 0])
+
+        toy = builder.build(name="toy_banbang")
 
     def initialize(self, env_idx: torch.Tensor):
         # table_height = 0.9196429
