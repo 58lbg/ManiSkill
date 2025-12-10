@@ -92,16 +92,16 @@ class TableSceneBuilder(SceneBuilder):
         builder = self.scene.create_actor_builder()
 
         # 添加视觉 (visual) mesh，从 glb 文件读取
-        builder.add_visual_from_file(filename=toy_path, scale=[1.8]*3)
+        builder.add_visual_from_file(filename=toy_path, scale=[2]*3)
         # 添加碰撞 (collision) — 推荐用凸碰撞 (convex collision) 或简单型碰撞
         # 这里用 convex collision 分解 (non-convex collisions 常不推荐用于动态／复杂 shape)
-        builder.add_convex_collision_from_file(filename=toy_path, scale=[1.8]*3)
+        builder.add_convex_collision_from_file(filename=toy_path, scale=[2]*3)
 
         # 设置初始 pose — 你需要根据你的 table size /位置调整 p、q
         # 例如放在桌面中心 (x, y) = (0, 0)，z 为 table height + 一定 offset
         # 假设 table top 的 z = 0 （你 build 的 table collision bottom 为 0），
         # 那么你给 toy 一个适当高度 (例如 0.5 m)：
-        builder.initial_pose = sapien.Pose(p=[0.0, 0.0, 0.5], q=q_90deg_z)
+        builder.initial_pose = sapien.Pose(p=[0.0, 2.0, -0.920], q=q_90deg_z)
 
         toy = builder.build(name="guizi")
 
