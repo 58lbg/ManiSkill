@@ -70,7 +70,7 @@ class TableSceneBuilder(SceneBuilder):
         toy_path = str(model_dir / "bangbang.glb")
         builder = self.scene.create_actor_builder()
 
-        q_90deg_z = [np.cos(90/2), np.sin(90/2), 0, 0]
+        q_90deg_z = [np.cos(np.pi/4), np.sin(np.pi/4), 0, 0]
 
         # 添加视觉 (visual) mesh，从 glb 文件读取
         builder.add_visual_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
