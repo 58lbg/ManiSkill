@@ -70,7 +70,7 @@ class TableSceneBuilder(SceneBuilder):
         toy_path = str(model_dir / "bangbang.glb")
         builder = self.scene.create_actor_builder()
 
-        q_90deg_z = [np.cos(np.pi/4), np.sin(np.pi/4), 0, 0]
+        q_90deg_z = self.euler_deg_to_quat(90, 0, 90)
 
         # 添加视觉 (visual) mesh，从 glb 文件读取
         builder.add_visual_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
@@ -104,6 +104,27 @@ class TableSceneBuilder(SceneBuilder):
         builder.initial_pose = sapien.Pose(p=[0.0, 2.0, -0.920], q=q_90deg_z)
 
         toy = builder.build(name="guizi")
+
+    def euler_deg_to_quat(self, x_deg=0, y_deg=0, z_deg=0, degrees=True):
+        """
+        将欧拉角转换为四元数
+
+        Args:
+            x_deg, y_deg, z_deg: 绕各轴旋转角度（度或弧度）
+            degrees: True 表示输入角度为度，False 表示输入为弧度
+
+        Returns:
+            四元数 [w, x, y, z]
+        """
+        if degrees:
+            x = np.deg2rad(x_deg)
+            y = np.deg2rad(y_deg)
+            z = np.deg2rad(z_deg)
+        else:
+            x, y, z = x_deg, y_deg, z_deg
+
+        quat = euler2quat(x, y, z, axes='sxyz')  # sxyz = 绕固定 xyz 顺序旋转
+        return quat
 
     def initialize(self, env_idx: torch.Tensor):
         # table_height = 0.9196429
