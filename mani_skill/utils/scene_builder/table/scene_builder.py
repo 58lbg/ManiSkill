@@ -73,7 +73,7 @@ class TableSceneBuilder(SceneBuilder):
         q_90deg_z = self.euler_deg_to_quat(90, 0, -90)
 
         # 添加视觉 (visual) mesh，从 glb 文件读取
-        builder.add_visual_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
+        builder.add_visual_from_file(filename=toy_path, scale=[0.2, 0.2, 0.2])
         # 添加碰撞 (collision) — 推荐用凸碰撞 (convex collision) 或简单型碰撞
         # 这里用 convex collision 分解 (non-convex collisions 常不推荐用于动态／复杂 shape)
         builder.add_convex_collision_from_file(filename=toy_path, scale=[0.1, 0.1, 0.1])
