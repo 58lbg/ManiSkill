@@ -351,10 +351,10 @@
     <child link="spur_gear__25_teeth"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-1.22173e-06" upper="0.69813"/>
-    <mimic joint="panda_finger_joint2" multiplier="-0.8"/>
+    <mimic joint="panda_finger_joint1" multiplier="-0.8"/>
   </joint>
   <!-- Link part_1 -->
-  <link name="part_1">
+  <link name="panda_rightfinger">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="1e-09"/>
@@ -394,16 +394,16 @@
     </collision>
   </link>
   <!-- Joint from part_3 to part_1 -->
-  <joint name="panda_finger_joint2" type="revolute">
+  <joint name="panda_finger_joint1" type="revolute">
     <origin xyz="-0.10918 -0.0134056 0.015" rpy="-5.76407e-17 -9.46633e-16 -1.74533e-06"/>
     <parent link="panda_hand"/>
-    <child link="part_1"/>
+    <child link="panda_rightfinger"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-0.69813" upper="1.91986e-06"/>
-    <mimic joint="panda_finger_joint1" multiplier="-1.0"/>
+    <mimic joint="panda_finger_joint2" multiplier="-1.0"/>
   </joint>
   <!-- Link part_4 -->
-  <link name="part_4">
+  <link name="panda_leftfinger">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="1e-09"/>
@@ -453,15 +453,15 @@
   </link>
   <joint name="gripper_frame_frame" type="fixed">
     <origin xyz="0.11668 -0.0134056 -0.009" rpy="1.5708 1.63133e-55 -3.46945e-16"/>
-    <parent link="part_4"/>
+    <parent link="panda_leftfinger"/>
     <child link="panda_hand_tcp"/>
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Joint from part_3 to part_4 -->
-  <joint name="panda_finger_joint1" type="revolute">
+  <joint name="panda_finger_joint2" type="revolute">
     <origin xyz="-0.10918 0.0134056 0.015" rpy="3.09945e-39 -7.84907e-40 1.74533e-06"/>
     <parent link="panda_hand"/>
-    <child link="part_4"/>
+    <child link="panda_leftfinger"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-1.21337e-18" upper="0.69813"/>
   </joint>

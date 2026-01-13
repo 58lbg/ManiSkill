@@ -225,10 +225,12 @@ class Panda(BaseAgent):
             self.robot.get_links(), "panda_rightfinger"
         )
         self.finger1pad_link = sapien_utils.get_obj_by_name(
-            self.robot.get_links(), "panda_leftfinger_pad"
+            # self.robot.get_links(), "panda_leftfinger_pad"
+            self.robot.get_links(), "panda_leftfinger"
         )
         self.finger2pad_link = sapien_utils.get_obj_by_name(
-            self.robot.get_links(), "panda_rightfinger_pad"
+            # self.robot.get_links(), "panda_rightfinger_pad"
+            self.robot.get_links(), "panda_rightfinger"
         )
         self.tcp = sapien_utils.get_obj_by_name(
             self.robot.get_links(), self.ee_link_name
