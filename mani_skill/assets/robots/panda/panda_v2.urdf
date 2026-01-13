@@ -351,7 +351,7 @@
     <child link="spur_gear__25_teeth"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-1.22173e-06" upper="0.69813"/>
-    <mimic joint="gripper_right" multiplier="-0.8"/>
+    <mimic joint="panda_finger_joint2" multiplier="-0.8"/>
   </joint>
   <!-- Link part_1 -->
   <link name="part_1">
@@ -394,13 +394,13 @@
     </collision>
   </link>
   <!-- Joint from part_3 to part_1 -->
-  <joint name="gripper_right" type="revolute">
+  <joint name="panda_finger_joint2" type="revolute">
     <origin xyz="-0.10918 -0.0134056 0.015" rpy="-5.76407e-17 -9.46633e-16 -1.74533e-06"/>
     <parent link="part_3"/>
     <child link="part_1"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-0.69813" upper="1.91986e-06"/>
-    <mimic joint="gripper_lerft" multiplier="-1.0"/>
+    <mimic joint="panda_finger_joint1" multiplier="-1.0"/>
   </joint>
   <!-- Link part_4 -->
   <link name="part_4">
@@ -458,7 +458,7 @@
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Joint from part_3 to part_4 -->
-  <joint name="gripper_lerft" type="revolute">
+  <joint name="panda_finger_joint1" type="revolute">
     <origin xyz="-0.10918 0.0134056 0.015" rpy="3.09945e-39 -7.84907e-40 1.74533e-06"/>
     <parent link="part_3"/>
     <child link="part_4"/>
