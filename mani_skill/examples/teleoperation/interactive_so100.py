@@ -43,7 +43,7 @@ def main(args: Args):
         control_mode="pd_joint_pos",
         render_mode="human",
         sim_backend="cpu",
-        render_backend="cpu",
+        render_backend="auto",
         reward_mode="none",
         robot_uids=args.robot_uid, 
         enable_shadow=True,
