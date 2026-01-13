@@ -37,7 +37,7 @@ class Args:
     control_mode: Annotated[Optional[str], tyro.conf.arg(aliases=["-c"])] = None
     """Control mode"""
 
-    render_mode: str = "rgb_array"
+    render_mode: str = "human"
     """Render mode"""
 
     shader: str = "default"
