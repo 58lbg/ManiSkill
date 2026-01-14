@@ -215,6 +215,7 @@
     <child link="panda_hand"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
+
   <!-- Link part_3 -->
   <link name="part_3">
     <inertial>
@@ -293,8 +294,8 @@
       </geometry>
     </collision>
   </link>
-  <!-- Frame panda_hand_tcp (dummy link + fixed joint) -->
-  <link name="panda_hand_tcp">
+  <!-- Frame panda_leftfinger_pad (dummy link + fixed joint) -->
+  <link name="panda_leftfinger_pad">
     <origin xyz="0 0 0" rpy="0 -0 0"/>
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -302,10 +303,10 @@
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
-  <joint name="panda_hand_tcp_frame" type="fixed">
+  <joint name="panda_leftfinger_pad_frame" type="fixed">
     <origin xyz="0.058726 0.015782 0.005" rpy="5.41441e-17 1.22433e-17 -0.222385"/>
     <parent link="panda_leftfinger"/>
-    <child link="panda_hand_tcp"/>
+    <child link="panda_leftfinger_pad"/>
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Joint from part_3 to panda_leftfinger -->
@@ -364,4 +365,5 @@
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-0.698132" upper="1.91986e-08"/>
   </joint>
+
 </robot>
