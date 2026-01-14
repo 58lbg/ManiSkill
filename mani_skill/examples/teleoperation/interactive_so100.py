@@ -130,7 +130,7 @@ def solve(env: BaseEnv, debug=False, vis=False):
         debug=debug,
         vis=vis,
         base_pose=env.unwrapped.agent.robot.pose,
-        visualize_target_grasp_pose=False,
+        visualize_target_grasp_pose=True,
         print_env_info=False,
         joint_acc_limits=0.5,
         joint_vel_limits=0.5,
