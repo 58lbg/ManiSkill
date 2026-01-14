@@ -210,87 +210,37 @@
     <child link="panda_link8"/>
   </joint>
   <!-- Custom gripper mounted on panda_link8 -->
-  <!-- Link part_3 -->
-  <link name="panda_hand">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
-    </inertial>
-    <!-- Part main -->
-    <visual>
-      <origin xyz="0 0 -0.00042" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/main.stl"/>
-      </geometry>
-      <material name="main_material">
-        <color rgba="0.247059 0.247059 0.247059 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 -0.00042" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/main.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part_6 -->
-    <visual>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/part_6.stl"/>
-      </geometry>
-      <material name="part_6_material">
-        <color rgba="0.231373 0.380392 0.705882 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/part_6.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part_3 -->
-    <visual>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/part_3.stl"/>
-      </geometry>
-      <material name="part_3_material">
-        <color rgba="0.231373 0.380392 0.705882 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/part_3.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part_12 -->
-    <visual>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/part_12.stl"/>
-      </geometry>
-      <material name="part_12_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/part_12.stl"/>
-      </geometry>
-    </collision>
-  </link>
-
   <joint name="gripper_mount" type="fixed">
     <parent link="panda_link8"/>
     <child link="panda_hand"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
-
-  <!-- Frame base_frame (dummy link + fixed joint) -->
-  <link name="base_frame">
+  <!-- Link part_3 -->
+  <link name="panda_hand">
+    <inertial>
+      <origin xyz="-0.136113 0.00438745 -0.00102318" rpy="0 0 0"/>
+      <mass value="0.0837641"/>
+      <inertia ixx="3.5721e-05" ixy="6.36817e-07" ixz="-1.25424e-06" iyy="3.06856e-05" iyz="1.55506e-06" izz="3.85706e-05"/>
+    </inertial>
+    <!-- Part part_3_parts -->
+    <visual>
+      <origin xyz="-0.136113 0.00438745 -0.00102318" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="gripper/part_3_visual.stl"/>
+      </geometry>
+      <material name="part_3_parts_material">
+        <color rgba="0.250707 0.336112 0.512571 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.136113 0.00438745 -0.00102318" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="gripper/part_3_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame panda_hand (dummy link + fixed joint) -->
+  <link name="panda_hand">
     <origin xyz="0 0 0" rpy="0 -0 0"/>
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -298,104 +248,13 @@
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
-  <joint name="base_frame_frame" type="fixed">
-    <origin xyz="-0.160364 6.42103e-18 0.00598" rpy="1.5708 -0 1.5708"/>
+  <joint name="panda_hand_frame" type="fixed">
+    <origin xyz="-0.160364 -1.73472e-18 0.00598" rpy="1.5708 -0 1.5708"/>
     <parent link="panda_hand"/>
-    <child link="base_frame"/>
+    <child link="panda_hand"/>
     <axis xyz="0 0 0"/>
   </joint>
-
-
-  <!-- Link part_1 -->
-  <link name="panda_rightfinger">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
-    </inertial>
-    <!-- Part part_2 -->
-    <visual>
-      <origin xyz="0.10918 0.0134056 -0.015" rpy="-4.807e-25 -1.29795e-32 7.97792e-17"/>
-      <geometry>
-        <mesh filename="gripper/part_2.stl"/>
-      </geometry>
-      <material name="part_2_material">
-        <color rgba="0.647059 0.647059 0.647059 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.10918 0.0134056 -0.015" rpy="-4.807e-25 -1.29795e-32 7.97792e-17"/>
-      <geometry>
-        <mesh filename="gripper/part_2.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part_1 -->
-    <visual>
-      <origin xyz="0.10918 0.0134056 -0.015" rpy="-4.72854e-34 1.84236e-31 3.13351e-22"/>
-      <geometry>
-        <mesh filename="gripper/part_1.stl"/>
-      </geometry>
-      <material name="part_1_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.10918 0.0134056 -0.015" rpy="-4.72854e-34 1.84236e-31 3.13351e-22"/>
-      <geometry>
-        <mesh filename="gripper/part_1.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- Joint from part_3 to part_1 -->
-  <joint name="panda_finger_joint1" type="revolute">
-    <origin xyz="-0.10918 -0.0134056 0.015" rpy="-5.76407e-17 -9.46633e-16 -1.74533e-06"/>
-    <parent link="panda_hand"/>
-    <child link="panda_rightfinger"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-0.69813" upper="1.91986e-06"/>
-    <mimic joint="panda_finger_joint2" multiplier="-1.0"/>
-  </joint>
-  <!-- Link part_4 -->
-  <link name="panda_leftfinger">
-    <inertial>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <mass value="1e-09"/>
-      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
-    </inertial>
-    <!-- Part part_4 -->
-    <visual>
-      <origin xyz="0.10918 -0.0134056 -0.015" rpy="0 -0 -4.69003e-23"/>
-      <geometry>
-        <mesh filename="gripper/part_4.stl"/>
-      </geometry>
-      <material name="part_4_material">
-        <color rgba="0.615686 0.811765 0.929412 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.10918 -0.0134056 -0.015" rpy="0 -0 -4.69003e-23"/>
-      <geometry>
-        <mesh filename="gripper/part_4.stl"/>
-      </geometry>
-    </collision>
-    <!-- Part part_5 -->
-    <visual>
-      <origin xyz="0.10918 -0.0134056 -0.015" rpy="-1.19949e-25 8.32259e-41 4.3024e-16"/>
-      <geometry>
-        <mesh filename="gripper/part_5.stl"/>
-      </geometry>
-      <material name="part_5_material">
-        <color rgba="0.647059 0.647059 0.647059 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0.10918 -0.0134056 -0.015" rpy="-1.19949e-25 8.32259e-41 4.3024e-16"/>
-      <geometry>
-        <mesh filename="gripper/part_5.stl"/>
-      </geometry>
-    </collision>
-  </link>
-  <!-- Frame gripper_frame (dummy link + fixed joint) -->
+  <!-- Frame panda_hand_tcp (dummy link + fixed joint) -->
   <link name="panda_hand_tcp">
     <origin xyz="0 0 0" rpy="0 -0 0"/>
     <inertial>
@@ -404,18 +263,105 @@
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
-  <joint name="gripper_frame_frame" type="fixed">
-    <origin xyz="0.11668 -0.0134056 -0.009" rpy="1.5708 1.63133e-55 -3.46945e-16"/>
+  <joint name="panda_hand_tcp_frame" type="fixed">
+    <origin xyz="0.0074957 -1.73472e-18 0.00598" rpy="0 -6.12323e-17 0"/>
+    <parent link="panda_hand"/>
+    <child link="panda_hand_tcp"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Link panda_leftfinger -->
+  <link name="panda_leftfinger">
+    <inertial>
+      <origin xyz="0.0427928 0.0043987 -0.00886565" rpy="0 0 0"/>
+      <mass value="0.0322882"/>
+      <inertia ixx="4.72234e-06" ixy="1.38144e-06" ixz="1.57632e-08" iyy="3.63073e-05" iyz="-1.58064e-08" izz="3.79352e-05"/>
+    </inertial>
+    <!-- Part panda_leftfinger_parts -->
+    <visual>
+      <origin xyz="0.0427928 0.0043987 -0.00886565" rpy="-2.18003e-16 8.41922e-16 -1.74533e-09"/>
+      <geometry>
+        <mesh filename="gripper/panda_leftfinger_visual.stl"/>
+      </geometry>
+      <material name="panda_leftfinger_parts_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0427928 0.0043987 -0.00886565" rpy="-2.18003e-16 8.41922e-16 -1.74533e-09"/>
+      <geometry>
+        <mesh filename="gripper/panda_leftfinger_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame panda_hand_tcp (dummy link + fixed joint) -->
+  <link name="panda_hand_tcp">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="panda_hand_tcp_frame" type="fixed">
+    <origin xyz="0.058726 0.015782 0.005" rpy="5.41441e-17 1.22433e-17 -0.222385"/>
     <parent link="panda_leftfinger"/>
     <child link="panda_hand_tcp"/>
     <axis xyz="0 0 0"/>
   </joint>
-  <!-- Joint from part_3 to part_4 -->
-  <joint name="panda_finger_joint2" type="revolute">
-    <origin xyz="-0.10918 0.0134056 0.015" rpy="3.09945e-39 -7.84907e-40 1.74533e-06"/>
+  <!-- Joint from part_3 to panda_leftfinger -->
+  <joint name="finger_joint1" type="revolute">
+    <origin xyz="-0.10918 0.0134056 0.015" rpy="2.18003e-16 -8.41922e-16 1.74533e-09"/>
     <parent link="panda_hand"/>
     <child link="panda_leftfinger"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="10" lower="-1.21337e-18" upper="0.69813"/>
+    <limit effort="10" velocity="10" lower="0" upper="0.698132"/>
+    <mimic joint="finger_joint2" multiplier="-1.0"/>
+  </joint>
+  <!-- Link panda_rightfinger -->
+  <link name="panda_rightfinger">
+    <inertial>
+      <origin xyz="0.0430404 -0.00447709 -0.00886479" rpy="0 0 0"/>
+      <mass value="0.0320815"/>
+      <inertia ixx="4.67589e-06" ixy="-1.47878e-06" ixz="1.68417e-08" iyy="3.5995e-05" iyz="1.54576e-08" izz="3.75877e-05"/>
+    </inertial>
+    <!-- Part panda_rightfinger_parts -->
+    <visual>
+      <origin xyz="0.0430404 -0.00447709 -0.00886479" rpy="2.98866e-24 -2.1986e-30 1.74533e-09"/>
+      <geometry>
+        <mesh filename="gripper/panda_rightfinger_visual.stl"/>
+      </geometry>
+      <material name="panda_rightfinger_parts_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0430404 -0.00447709 -0.00886479" rpy="2.98866e-24 -2.1986e-30 1.74533e-09"/>
+      <geometry>
+        <mesh filename="gripper/panda_rightfinger_collision.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Frame panda_rightfinger_pad (dummy link + fixed joint) -->
+  <link name="panda_rightfinger_pad">
+    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-9"/>
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+    </inertial>
+  </link>
+  <joint name="panda_rightfinger_pad_frame" type="fixed">
+    <origin xyz="0.058726 -0.015782 0.005" rpy="-5.41441e-17 1.22433e-17 0.222385"/>
+    <parent link="panda_rightfinger"/>
+    <child link="panda_rightfinger_pad"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+  <!-- Joint from part_3 to panda_rightfinger -->
+  <joint name="finger_joint2" type="revolute">
+    <origin xyz="-0.10918 -0.0134056 0.015" rpy="-2.98866e-24 2.19338e-30 -1.74533e-09"/>
+    <parent link="panda_hand"/>
+    <child link="panda_rightfinger"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-0.698132" upper="1.91986e-08"/>
   </joint>
 </robot>
