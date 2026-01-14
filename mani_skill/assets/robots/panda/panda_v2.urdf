@@ -213,7 +213,7 @@
   <joint name="panda_hand_joint" type="fixed">
     <parent link="panda_link8"/>
     <child link="part_3"/>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0.16" rpy="0 -1.5708 2.38562"/>
   </joint>
 
   <!-- Link part_3 -->
@@ -332,7 +332,7 @@
   </link>
   <!-- Frame panda_hand (dummy link + fixed joint) -->
   <link name="panda_hand">
-    <origin xyz="0 0 0" rpy="0 -0 0"/>
+    <origin xyz="-0 0 0" rpy="0 -0 0"/>
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="1e-9"/>
