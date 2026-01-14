@@ -484,7 +484,7 @@
     </inertial>
   </link>
   <joint name="panda_leftfinger_pad_frame" type="fixed">
-    <origin xyz="0.058726 0.015782 0.005" rpy="5.41441e-17 1.22433e-17 -0.222385"/>
+    <origin xyz="0.11668 -0.0134056 -0.009" rpy="6.12323e-17 7.88861e-31 -3.46945e-16"/>
     <parent link="panda_leftfinger"/>
     <child link="panda_leftfinger_pad"/>
     <axis xyz="0 0 0"/>
@@ -622,7 +622,7 @@
     </inertial>
   </link>
   <joint name="panda_rightfinger_pad_frame" type="fixed">
-    <origin xyz="0.058726 -0.015782 0.005" rpy="-5.41441e-17 1.22433e-17 0.222385"/>
+    <origin xyz="0.11668 0.0134056 -0.009" rpy="-6.12323e-17 -2.80596e-32 3.46945e-16"/>
     <parent link="panda_rightfinger"/>
     <child link="panda_rightfinger_pad"/>
     <axis xyz="0 0 0"/>
