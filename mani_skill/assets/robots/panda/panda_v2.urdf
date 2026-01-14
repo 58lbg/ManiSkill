@@ -210,13 +210,13 @@
     <child link="panda_link8"/>
   </joint>
   <!-- Custom gripper mounted on panda_link8 -->
-  <joint name="gripper_mount" type="fixed">
+  <joint name="panda_hand_joint" type="fixed">
     <parent link="panda_link8"/>
     <child link="panda_hand"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
   <!-- Link part_3 -->
-  <link name="panda_hand">
+  <link name="part_3">
     <inertial>
       <origin xyz="-0.136113 0.00438745 -0.00102318" rpy="0 0 0"/>
       <mass value="0.0837641"/>
@@ -226,7 +226,7 @@
     <visual>
       <origin xyz="-0.136113 0.00438745 -0.00102318" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="gripper/part_3_visual.stl"/>
+        <mesh filename="package://assets/merged/part_3_visual.stl"/>
       </geometry>
       <material name="part_3_parts_material">
         <color rgba="0.250707 0.336112 0.512571 1"/>
@@ -235,7 +235,7 @@
     <collision>
       <origin xyz="-0.136113 0.00438745 -0.00102318" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="gripper/part_3_collision.stl"/>
+        <mesh filename="package://assets/merged/part_3_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -250,7 +250,7 @@
   </link>
   <joint name="panda_hand_frame" type="fixed">
     <origin xyz="-0.160364 -1.73472e-18 0.00598" rpy="1.5708 -0 1.5708"/>
-    <parent link="panda_hand"/>
+    <parent link="part_3"/>
     <child link="panda_hand"/>
     <axis xyz="0 0 0"/>
   </joint>
@@ -265,7 +265,7 @@
   </link>
   <joint name="panda_hand_tcp_frame" type="fixed">
     <origin xyz="0.0074957 -1.73472e-18 0.00598" rpy="0 -6.12323e-17 0"/>
-    <parent link="panda_hand"/>
+    <parent link="part_3"/>
     <child link="panda_hand_tcp"/>
     <axis xyz="0 0 0"/>
   </joint>
@@ -280,7 +280,7 @@
     <visual>
       <origin xyz="0.0427928 0.0043987 -0.00886565" rpy="-2.18003e-16 8.41922e-16 -1.74533e-09"/>
       <geometry>
-        <mesh filename="gripper/panda_leftfinger_visual.stl"/>
+        <mesh filename="package://assets/merged/panda_leftfinger_visual.stl"/>
       </geometry>
       <material name="panda_leftfinger_parts_material">
         <color rgba="0.231373 0.380392 0.705882 1"/>
@@ -289,7 +289,7 @@
     <collision>
       <origin xyz="0.0427928 0.0043987 -0.00886565" rpy="-2.18003e-16 8.41922e-16 -1.74533e-09"/>
       <geometry>
-        <mesh filename="gripper/panda_leftfinger_collision.stl"/>
+        <mesh filename="package://assets/merged/panda_leftfinger_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -311,7 +311,7 @@
   <!-- Joint from part_3 to panda_leftfinger -->
   <joint name="finger_joint1" type="revolute">
     <origin xyz="-0.10918 0.0134056 0.015" rpy="2.18003e-16 -8.41922e-16 1.74533e-09"/>
-    <parent link="panda_hand"/>
+    <parent link="part_3"/>
     <child link="panda_leftfinger"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="0" upper="0.698132"/>
@@ -328,7 +328,7 @@
     <visual>
       <origin xyz="0.0430404 -0.00447709 -0.00886479" rpy="2.98866e-24 -2.1986e-30 1.74533e-09"/>
       <geometry>
-        <mesh filename="gripper/panda_rightfinger_visual.stl"/>
+        <mesh filename="package://assets/merged/panda_rightfinger_visual.stl"/>
       </geometry>
       <material name="panda_rightfinger_parts_material">
         <color rgba="0.231373 0.380392 0.705882 1"/>
@@ -337,7 +337,7 @@
     <collision>
       <origin xyz="0.0430404 -0.00447709 -0.00886479" rpy="2.98866e-24 -2.1986e-30 1.74533e-09"/>
       <geometry>
-        <mesh filename="gripper/panda_rightfinger_collision.stl"/>
+        <mesh filename="package://assets/merged/panda_rightfinger_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -359,7 +359,7 @@
   <!-- Joint from part_3 to panda_rightfinger -->
   <joint name="finger_joint2" type="revolute">
     <origin xyz="-0.10918 -0.0134056 0.015" rpy="-2.98866e-24 2.19338e-30 -1.74533e-09"/>
-    <parent link="panda_hand"/>
+    <parent link="part_3"/>
     <child link="panda_rightfinger"/>
     <axis xyz="0 0 1"/>
     <limit effort="10" velocity="10" lower="-0.698132" upper="1.91986e-08"/>
