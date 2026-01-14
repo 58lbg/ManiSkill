@@ -177,7 +177,7 @@ class Panda(BaseAgent):
         gripper_pd_joint_pos = PDJointPosMimicControllerConfig(
             self.gripper_joint_names,
             lower=-0.01,  # a trick to have force when the object is thin
-            upper=0.04,
+            upper=0.6,
             stiffness=self.gripper_stiffness,
             damping=self.gripper_damping,
             force_limit=self.gripper_force_limit,
