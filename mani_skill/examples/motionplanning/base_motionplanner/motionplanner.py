@@ -153,6 +153,8 @@ class BaseMotionPlanningSolver:
             self.robot.get_qpos().cpu().numpy()[0],
             time_step=self.base_env.control_timestep,
             use_point_cloud=self.use_point_cloud,
+            verbose=True
+
         )
         if result["status"] != "Success":
             result = self.planner.plan_screw(

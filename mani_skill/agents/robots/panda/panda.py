@@ -43,7 +43,7 @@ class Panda(BaseAgent):
                     np.pi * 3 / 4,
                     np.pi / 4,
                     0.3,
-                    0.3,
+                    -0.3,
                 ]
             ),
             pose=sapien.Pose(),
