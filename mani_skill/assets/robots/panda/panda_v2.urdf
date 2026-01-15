@@ -503,8 +503,8 @@
   <link name="panda_rightfinger">
     <inertial>
       <origin xyz="0.0430404 -0.00447709 -0.00886479" rpy="0 0 0"/>
-      <mass value="0.0320815"/>
-      <inertia ixx="4.67589e-06" ixy="-1.47878e-06" ixz="1.68417e-08" iyy="3.5995e-05" iyz="1.54576e-08" izz="3.75877e-05"/>
+      <mass value="0.0322882"/>
+      <inertia ixx="4.72234e-06" ixy="-1.38144e-06" ixz="1.57632e-08" iyy="3.63073e-05" iyz="1.58064e-08" izz="3.79352e-05"/>
     </inertial>
     <!-- Part panda_rightfinger_parts -->
     <visual>
