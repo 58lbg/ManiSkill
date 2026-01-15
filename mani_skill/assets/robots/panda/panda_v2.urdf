@@ -355,7 +355,7 @@
     </inertial>
   </link>
   <joint name="panda_hand_tcp_frame" type="fixed">
-    <origin xyz="2.51535e-17 2.34694e-17 0.16786" rpy="3.14159 -1.5708 0"/>
+    <origin xyz="2.51535e-17 2.34694e-17 0.16786" rpy="-1.22465e-16 6.12323e-17 -4.59169e-49"/>
     <parent link="part_3"/>
     <child link="panda_hand_tcp"/>
     <axis xyz="0 0 0"/>
