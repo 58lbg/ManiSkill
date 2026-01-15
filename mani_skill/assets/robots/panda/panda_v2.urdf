@@ -497,6 +497,7 @@
     <axis xyz="0 0 1"/>
     <limit effort="100" velocity="10" upper="0.5" lower="-0.185"/>
     <mimic joint="panda_finger_joint2" multiplier="1.0"/>
+    <dynamics damping="0.3"/>
   </joint>
   <!-- Link panda_rightfinger -->
   <link name="panda_rightfinger">
@@ -634,5 +635,6 @@
     <child link="panda_rightfinger"/>
     <axis xyz="0 0 -1"/>
     <limit effort="100" velocity="100" upper="0.5" lower="-0.185"/>
+    <dynamics damping="0.3"/>
   </joint>
 </robot>
