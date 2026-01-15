@@ -42,8 +42,8 @@ class Panda(BaseAgent):
                     0,
                     np.pi * 3 / 4,
                     np.pi / 4,
-                    0.04,
-                    0.04,
+                    0.1,
+                    0.1,
                 ]
             ),
             pose=sapien.Pose(),
@@ -176,12 +176,12 @@ class Panda(BaseAgent):
         # However, tune a good force limit to have a good mimic behavior
         gripper_pd_joint_pos = PDJointPosMimicControllerConfig(
             self.gripper_joint_names,
-            lower=-0.01,  # a trick to have force when the object is thin
-            upper=0.04,
+            lower=-0.185,  # a trick to have force when the object is thin
+            upper=0.5,
             stiffness=self.gripper_stiffness,
             damping=self.gripper_damping,
             force_limit=self.gripper_force_limit,
-            mimic={"panda_finger_joint2": {"joint": "panda_finger_joint1"}},
+            mimic={"panda_finger_joint2": {"joint": "panda_finger_joint1", "multiplier":1.0 }},
         )
 
         controller_configs = dict(
