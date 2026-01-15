@@ -212,12 +212,12 @@
   <!-- Custom gripper mounted on panda_link8 -->
   <joint name="panda_hand_joint" type="fixed">
     <parent link="panda_link8"/>
-    <child link="part_3"/>
-    <origin xyz="0 0 0.001" rpy="0 0 0"/>
+    <child link="panda_hand"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
   </joint>
 
   <!-- Link part_3 -->
-  <link name="part_3">
+  <link name="panda_hand">
     <inertial>
       <origin xyz="-0.00700318 -0.00438745 0.0242516" rpy="0 0 0"/>
       <mass value="0.0837641"/>
@@ -331,7 +331,7 @@
     </collision>
   </link>
   <!-- Frame panda_hand (dummy link + fixed joint) -->
-  <link name="panda_hand">
+  <link name="panda_hand_1">
     <origin xyz="0 0 0" rpy="0 -0 0"/>
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -339,10 +339,10 @@
       <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
     </inertial>
   </link>
-  <joint name="panda_hand_frame" type="fixed">
+  <joint name="panda_hand_1_frame" type="fixed">
     <origin xyz="1.47451e-17 2.91244e-18 0" rpy="-1.22465e-16 6.12323e-17 -4.59169e-49"/>
-    <parent link="part_3"/>
-    <child link="panda_hand"/>
+    <parent link="panda_hand"/>
+    <child link="panda_hand_1"/>
     <axis xyz="0 0 0"/>
   </joint>
   <!-- Frame panda_hand_tcp (dummy link + fixed joint) -->
@@ -356,7 +356,7 @@
   </link>
   <joint name="panda_hand_tcp_frame" type="fixed">
     <origin xyz="2.51535e-17 2.34694e-17 0.16786" rpy="-1.22465e-16 6.12323e-17 -4.59169e-49"/>
-    <parent link="part_3"/>
+    <parent link="panda_hand"/>
     <child link="panda_hand_tcp"/>
     <axis xyz="0 0 0"/>
   </joint>
@@ -492,7 +492,7 @@
   <!-- Joint from part_3 to panda_leftfinger -->
   <joint name="panda_finger_joint1" type="revolute">
     <origin xyz="0.00902 -0.0134056 0.0511842" rpy="-1.5708 -1.38679 -1.5708"/>
-    <parent link="part_3"/>
+    <parent link="panda_hand"/>
     <child link="panda_leftfinger"/>
     <axis xyz="0 0 1"/>
     <limit effort="100" velocity="10" upper="0.5" lower="-0.185"/>
@@ -631,7 +631,7 @@
   <!-- Joint from part_3 to panda_rightfinger -->
   <joint name="panda_finger_joint2" type="revolute">
     <origin xyz="0.00902 0.0134056 0.0511842" rpy="1.5708 -1.38679 1.5708"/>
-    <parent link="part_3"/>
+    <parent link="panda_hand"/>
     <child link="panda_rightfinger"/>
     <axis xyz="0 0 -1"/>
     <limit effort="100" velocity="10" upper="0.5" lower="-0.185"/>
