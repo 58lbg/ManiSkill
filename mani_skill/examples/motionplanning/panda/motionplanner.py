@@ -7,8 +7,8 @@ from mani_skill.examples.motionplanning.two_finger_gripper.motionplanner import 
 
 
 class PandaArmMotionPlanningSolver(TwoFingerGripperMotionPlanningSolver):
-    OPEN = 0.6
-    CLOSED = -0.6
+    OPEN = 1
+    CLOSED = -1
     MOVE_GROUP = "panda_hand_tcp"
 
     def __init__(
