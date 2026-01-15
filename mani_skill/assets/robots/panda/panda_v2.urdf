@@ -495,8 +495,8 @@
     <parent link="part_3"/>
     <child link="panda_leftfinger"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="0.2" lower="0" upper="0.69"/>
-    <mimic joint="panda_finger_joint2" multiplier="-1.0"/>
+    <limit effort="10" velocity="0.3" lower="0" upper="0.69"/>
+    <mimic joint="panda_finger_joint2" multiplier="1.0"/>
   </joint>
   <!-- Link panda_rightfinger -->
   <link name="panda_rightfinger">
@@ -632,8 +632,8 @@
     <origin xyz="-0.10918 -0.0134056 0.015" rpy="0 0 0"/>
     <parent link="part_3"/>
     <child link="panda_rightfinger"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="10" velocity="0.2" lower="-0.69" upper="0"/>
+    <axis xyz="0 0 -1"/>
+    <limit effort="10" velocity="0.3" lower="0.69" upper="0"/>
   </joint>
 
 </robot>
