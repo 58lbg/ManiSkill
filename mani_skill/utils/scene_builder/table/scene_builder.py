@@ -142,8 +142,8 @@ class TableSceneBuilder(SceneBuilder):
                     0,
                     np.pi * 3 / 4,
                     np.pi / 4,
-                    0.04,
-                    0.04,
+                    0.1,
+                    -0.1,
                 ]
             )
             if self.env._enhanced_determinism:
