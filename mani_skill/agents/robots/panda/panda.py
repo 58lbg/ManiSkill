@@ -233,6 +233,7 @@ class Panda(BaseAgent):
         self.tcp = sapien_utils.get_obj_by_name(
             self.robot.get_links(), self.ee_link_name
         )
+        self.setup_gripper_drive()
 
     def is_grasping(self, object: Actor, min_force=0.5, max_angle=85):
         """Check if the robot is grasping an object
@@ -287,6 +288,15 @@ class Panda(BaseAgent):
         T[:3, :3] = np.stack([ortho, closing, approaching], axis=1)
         T[:3, 3] = center
         return sapien.Pose(T)
+
+    def setup_gripper_drive(self):
+        self.finger1_link.set_drive_property(50, 5)
+        self.finger2_link.set_drive_property(50, 5)
+
+    def reset(self, init_qpos: torch.Tensor = None):
+        super().reset(init_qpos)
+        self.setup_gripper_drive()
+
 
     # sensor_configs = [
     #     CameraConfig(
