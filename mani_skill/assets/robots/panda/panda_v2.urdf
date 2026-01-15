@@ -633,6 +633,6 @@
     <parent link="part_3"/>
     <child link="panda_rightfinger"/>
     <axis xyz="0 0 -1"/>
-    <limit effort="10" velocity="0.3" upper="-0.514125" lower="0.184007"/>
+    <limit effort="10" velocity="0.3" upper="0.514125" lower="-0.184007"/>
   </joint>
 </robot>
