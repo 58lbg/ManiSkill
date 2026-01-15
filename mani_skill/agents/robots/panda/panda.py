@@ -69,9 +69,9 @@ class Panda(BaseAgent):
     arm_damping = 1e2
     arm_force_limit = 100
 
-    gripper_stiffness = 1e3
-    gripper_damping = 1e2
-    gripper_force_limit = 100
+    gripper_stiffness = 50
+    gripper_damping = 5
+    gripper_force_limit = 50
 
     @property
     def _controller_configs(self):
@@ -290,8 +290,8 @@ class Panda(BaseAgent):
         return sapien.Pose(T)
 
     def setup_gripper_drive(self):
-        self.robot.find_joint_by_name("panda_finger_joint1").set_drive_property(50, 5)
-        self.robot.find_joint_by_name("panda_finger_joint2").set_drive_property(50, 5)
+        self.robot.find_joint_by_name("panda_finger_joint1").set_drive_properties(50, 5)
+        self.robot.find_joint_by_name("panda_finger_joint2").set_drive_properties(50, 5)
 
     def reset(self, init_qpos: torch.Tensor = None):
         super().reset(init_qpos)
