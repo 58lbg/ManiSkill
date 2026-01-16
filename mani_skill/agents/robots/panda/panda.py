@@ -290,8 +290,9 @@ class Panda(BaseAgent):
         return sapien.Pose(T)
 
     def setup_gripper_drive(self):
-        self.robot.find_joint_by_name("panda_finger_joint1").set_drive_properties(50, 5)
-        self.robot.find_joint_by_name("panda_finger_joint2").set_drive_properties(50, 5)
+        print("")
+        # self.robot.find_joint_by_name("panda_finger_joint1").set_drive_properties(50, 5)
+        # self.robot.find_joint_by_name("panda_finger_joint2").set_drive_properties(50, 5)
 
     def reset(self, init_qpos: torch.Tensor = None):
         super().reset(init_qpos)
