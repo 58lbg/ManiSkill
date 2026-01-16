@@ -69,8 +69,8 @@ class Panda(BaseAgent):
     arm_damping = 1e2
     arm_force_limit = 100
 
-    gripper_stiffness = 1000
-    gripper_damping = 100
+    gripper_stiffness = 50
+    gripper_damping = 5
     gripper_force_limit = 100
 
     @property
