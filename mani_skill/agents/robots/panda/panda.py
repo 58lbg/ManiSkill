@@ -71,7 +71,7 @@ class Panda(BaseAgent):
 
     gripper_stiffness = 50
     gripper_damping = 5
-    gripper_force_limit = 100
+    gripper_force_limit = 50
 
     @property
     def _controller_configs(self):
