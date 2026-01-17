@@ -617,7 +617,7 @@
     <origin xyz="0.00902 0.0134056 0.0511842" rpy="3.14159 -1.5708 0"/>
     <parent link="panda_hand"/>
     <child link="panda_rightfinger"/>
-    <axis xyz="0 0 1"/>
+    <axis xyz="0 0 -1"/>
     <limit effort="10" velocity="10" upper="0.69" lower="0"/>
   </joint>
 </robot>
