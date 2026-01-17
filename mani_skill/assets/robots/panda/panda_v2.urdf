@@ -216,7 +216,7 @@
     <origin xyz="0 0 0" rpy="0 0 -0.7853981633974483"/>
   </joint>
 
-  <!-- Link panda_hand -->
+   <!-- Link panda_hand -->
   <link name="panda_hand">
     <inertial>
       <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 0 0"/>
@@ -236,97 +236,7 @@
     <collision>
       <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00000.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00001.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00002.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00003.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00004.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00005.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00006.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00007.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00008.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00009.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00010.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00011.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00012.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00013.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00014.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_hand_parts_00015.stl"/>
+        <mesh filename="gripper/merged/panda_hand_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -365,97 +275,7 @@
     <collision>
       <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00000.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00001.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00002.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00003.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00004.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00005.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00006.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00007.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00008.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00009.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00010.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00011.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00012.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00013.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00014.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0416728 0.00456042 -0.00886367" rpy="3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_leftfinger_parts_00015.stl"/>
+        <mesh filename="gripper/merged/panda_leftfinger_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -503,97 +323,7 @@
     <collision>
       <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
       <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00000.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00001.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00002.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00003.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00004.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00005.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00006.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00007.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00008.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00009.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00010.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00011.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00012.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00013.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00014.stl"/>
-      </geometry>
-    </collision>
-    <collision>
-      <origin xyz="0.0419169 -0.00464086 -0.00886278" rpy="-3.14159 -1.5708 0"/>
-      <geometry>
-        <mesh filename="gripper/convex_decomposition/panda_rightfinger_parts_00015.stl"/>
+        <mesh filename="gripper/merged/panda_rightfinger_collision.stl"/>
       </geometry>
     </collision>
   </link>
@@ -618,6 +348,6 @@
     <parent link="panda_hand"/>
     <child link="panda_rightfinger"/>
     <axis xyz="0 0 -1"/>
-    <limit effort="10" velocity="10" upper="0.69" lower="0"/>
+    <limit effort="10" velocity="10" lower="0" upper="0.69"/>
   </joint>
 </robot>
