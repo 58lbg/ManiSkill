@@ -227,7 +227,7 @@
     <visual>
       <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
       <geometry>
-        <mesh filename="gripper/merged/Assembly 2.obj"/>
+        <mesh filename="gripper/merged/panda_hand.glb"/>
       </geometry>
 
     </visual>
