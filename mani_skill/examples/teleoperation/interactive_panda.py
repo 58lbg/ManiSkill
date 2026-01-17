@@ -29,9 +29,9 @@ class Args:
     """directory to record the demonstration data and optionally videos"""
     save_video: bool = False
     """whether to save the videos of the demonstrations after collecting them all"""
-    viewer_shader: str = "rt-fast"
+    viewer_shader: str = "default"
     """the shader to use for the viewer. 'default' is fast but lower-quality shader, 'rt' and 'rt-fast' are the ray tracing shaders"""
-    video_saving_shader: str = "rt-fast"
+    video_saving_shader: str = "minimal"
     """the shader to use for the videos of the demonstrations. 'minimal' is the fast shader, 'rt' and 'rt-fast' are the ray tracing shaders"""
 
 def parse_args() -> Args:
