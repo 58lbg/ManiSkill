@@ -229,9 +229,7 @@
       <geometry>
         <mesh filename="gripper/merged/anda_hand.obj"/>
       </geometry>
-      <material name="panda_hand_parts_material">
-        <color rgba="0.101961 0.407843 0.909804 1"/>
-      </material>
+
     </visual>
     <collision>
       <origin xyz="-0.00704549 -0.00443977 0.0242655" rpy="0 -0 0"/>
