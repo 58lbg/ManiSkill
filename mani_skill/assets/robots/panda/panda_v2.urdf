@@ -230,7 +230,7 @@
         <mesh filename="gripper/merged/panda_hand_visual.stl"/>
       </geometry>
       <material name="panda_hand_parts_material">
-        <color rgba="0.134684 0.295534 0.557742 1"/>
+        <color rgba="0.101961 0.407843 0.909804 1"/>
       </material>
     </visual>
     <collision>
