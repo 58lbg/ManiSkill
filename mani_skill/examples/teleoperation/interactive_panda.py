@@ -21,7 +21,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Args:
-    env_id: Annotated[str, tyro.conf.arg(aliases=["-e"])] = "PickCube-v1"
+    env_id: Annotated[str, tyro.conf.arg(aliases=["-e"])] = "PegInsertionSide-v1"
     obs_mode: str = "none"
     robot_uid: Annotated[str, tyro.conf.arg(aliases=["-r"])] = "panda"
     """The robot to use. Robot setups supported for teleop in this script are panda and panda_stick"""
