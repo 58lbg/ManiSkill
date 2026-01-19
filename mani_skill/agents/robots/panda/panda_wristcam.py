@@ -18,7 +18,6 @@ class PandaWristCam(Panda):
 
     @property
     def _sensor_configs(self):
-        print(f"zk:{self.urdf_path}")
         return [
             CameraConfig(
                 uid="hand_camera",
