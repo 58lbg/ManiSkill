@@ -8,10 +8,10 @@ python mani_skill/examples/demo_umi_eval.py \
     -o data/eval_cup_wild_example
 
 # 运行命令
-python mani_skill/examples/demo_umi_eval.py \
-    --robot_config=mani_skill/examples/config/eval_robots_config.yaml \
-    -i mani_skill/examples/data/'epoch=0000-train_loss=0.044.ckpt' \
-    -o mani_skill/examples/data/eval_cup_wild_example
+python lbg/demo_umi_eval.py \
+    --robot_config=lbg/config/eval_robots_config.yaml \
+    -i lbg/train/'epoch=0000-train_loss=0.044.ckpt' \
+    -o lbg/data/eval_cup_wild_example
 
 Controls:
 - Press 'C' to start policy evaluation
