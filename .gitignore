@@ -44,3 +44,13 @@ imgui.ini
 # testing
 .coverage*
 htmlcov/
+
+# 万总会议室场景
+/mani_skill/assets/robots/panda/gripper/main.stl.convex.stl
+/mani_skill/utils/scene_builder/meeting_room/
+/mani_skill/utils/scene_builder/table/assets/guizi.glb
+
+# 模型数据
+/lbg/train
+
+

@@ -1,0 +1,29 @@
+# Robot configuration for UMI evaluation in ManiSkill simulation
+# This config file defines robot-specific parameters for the evaluation
+
+# Transform matrix from robot1 to robot0 (for dual-arm setups)
+# For single arm, this is identity matrix
+tx_left_right: 
+  - [1, 0, 0, 0]
+  - [0, 1, 0, 0]
+  - [0, 0, 1, 0]
+  - [0, 0, 0, 1]
+
+# Robot configurations
+robots:
+  - name: "panda_wristcam"
+    robot_type: "panda"
+    # Height threshold for table collision avoidance (in meters)
+    height_threshold: 0.02
+    # Sphere collision parameters for dual-arm collision avoidance
+    sphere_center: [0.0, 0.0, 0.0]  # Relative to end-effector
+    sphere_radius: 0.15
+
+# Gripper configurations  
+grippers:
+  - name: "panda_gripper"
+    gripper_type: "parallel_jaw"
+    max_width: 0.09  # Maximum gripper opening in meters
+    min_width: 0.0   # Minimum gripper opening in meters
+    speed: 0.2       # Gripper speed in m/s
+
