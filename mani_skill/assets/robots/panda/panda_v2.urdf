@@ -355,7 +355,7 @@
     </inertial>
   </link>
   <joint name="camera_link_frame" type="fixed">
-    <origin xyz="0.07382 -0.00025 0.0305842" rpy="-6.12323e-17 -1.14553e-15 -2.00965e-31"/>
+    <origin xyz="0.07382 -0.00025 0.0405842" rpy="-6.12323e-17 -1.14553e-15 -2.00965e-31"/>
     <parent link="panda_hand"/>
     <child link="camera_link"/>
     <axis xyz="0 0 0"/>

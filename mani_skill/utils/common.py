@@ -5,12 +5,12 @@ Common utilities often reused for internal code and task building for users.
 from collections import defaultdict
 from typing import Optional, Sequence, Tuple, Union
 
-import gymnasium as gym
 import numpy as np
-import sapien.physx as physx
 import torch
+from transforms3d.euler import euler2quat
 
 from mani_skill.utils.structs.types import Array, Device
+
 
 # -------------------------------------------------------------------------- #
 # Utilities for working with tensors, numpy arrays, and batched data
@@ -379,6 +379,26 @@ def to_numpy(array: Union[Array, Sequence], dtype=None) -> np.ndarray:
         return array.astype(dtype)
     return array
 
+def euler_deg_to_quat(x_deg=0, y_deg=0, z_deg=0, degrees=True):
+    """
+    将欧拉角转换为四元数
+
+    Args:
+        x_deg, y_deg, z_deg: 绕各轴旋转角度（度或弧度）
+        degrees: True 表示输入角度为度，False 表示输入为弧度
+
+    Returns:
+        四元数 [w, x, y, z]
+    """
+    if degrees:
+        x = np.deg2rad(x_deg)
+        y = np.deg2rad(y_deg)
+        z = np.deg2rad(z_deg)
+    else:
+        x, y, z = x_deg, y_deg, z_deg
+
+    quat = euler2quat(x, y, z, axes='sxyz')  # sxyz = 绕固定 xyz 顺序旋转
+    return quat
 
 # -------------------------------------------------------------------------- #
 # Utilities for working with quaternions

@@ -5,6 +5,7 @@ from mani_skill import PACKAGE_ASSET_DIR
 from mani_skill.agents.registration import register_agent
 from mani_skill.sensors.camera import CameraConfig
 from mani_skill.utils import sapien_utils
+from mani_skill.utils.common import euler_deg_to_quat
 
 from .panda import Panda
 
@@ -21,10 +22,10 @@ class PandaWristCam(Panda):
         return [
             CameraConfig(
                 uid="hand_camera",
-                pose=sapien.Pose(p=[0, 0, 0], q=[1, 0, 0, 0]),
-                width=128,
-                height=128,
-                fov=np.pi / 2,
+                pose=sapien.Pose(p=[0, 0, 0], q=euler_deg_to_quat(0, -90, 0)),
+                width=1920,
+                height=1080,
+                fov=2.74,
                 near=0.01,
                 far=100,
                 mount=self.robot.links_map["camera_link"],
