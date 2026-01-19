@@ -15,10 +15,10 @@ class PandaWristCam(Panda):
 
     uid = "panda_wristcam"
     urdf_path = f"{PACKAGE_ASSET_DIR}/robots/panda/panda_v3.urdf"
-    print("zk:panda_wristcam")
 
     @property
     def _sensor_configs(self):
+        print(f"zk:{self.urdf_path}")
         return [
             CameraConfig(
                 uid="hand_camera",
