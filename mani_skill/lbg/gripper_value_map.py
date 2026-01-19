@@ -1,4 +1,4 @@
-def action_to_joint(x, xmin=0.0515, xmax=0.0943):
+def action_to_joint(x, xmin=0.0559, xmax=0.11899):
     # 1. 限幅
     x_clamped = max(xmin, min(xmax, x))
 
