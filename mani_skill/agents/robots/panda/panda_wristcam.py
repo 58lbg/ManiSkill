@@ -14,7 +14,7 @@ class PandaWristCam(Panda):
     """Panda arm robot with the real sense camera attached to gripper"""
 
     uid = "panda_wristcam"
-    urdf_path = f"{PACKAGE_ASSET_DIR}/robots/panda/panda_v3.urdf"
+    urdf_path = f"{PACKAGE_ASSET_DIR}/robots/panda/panda_v2.urdf"
 
     @property
     def _sensor_configs(self):
