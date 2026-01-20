@@ -45,6 +45,7 @@ def _main(args, proc_id: int = 0, start_seed: int = 0) -> str:
     env_id = args.env_id
     env = gym.make(
         env_id,
+        robot_uids="panda_wristcam",
         obs_mode=args.obs_mode,
         control_mode="pd_joint_pos",
         render_mode=args.render_mode,

@@ -34,7 +34,7 @@ class PullCubeToolEnv(BaseEnv):
 
     _sample_video_link = "https://github.com/haosulab/ManiSkill/raw/main/figures/environment_demos/PullCubeTool-v1_rt.mp4"
 
-    SUPPORTED_ROBOTS = ["panda", "fetch"]
+    SUPPORTED_ROBOTS = ["panda", "panda_wristcam", "fetch"]
     SUPPORTED_REWARD_MODES = ("normalized_dense", "dense", "sparse", "none")
     agent: Union[Panda, Fetch]
 
